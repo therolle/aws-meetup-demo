@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #047d95;
+  --color-primary-dark: #036b80;
+}
+
+:root {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+[data-amplify-authenticator] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
