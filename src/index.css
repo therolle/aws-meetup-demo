@@ -1,17 +1,58 @@
 @import "tailwindcss";
 
 @theme {
+  /* Primary colors */
   --color-primary: #047d95;
   --color-primary-dark: #036b80;
+  
+  /* Background colors - Light theme */
+  --color-bg-primary: #f8fafc;
+  --color-bg-secondary: #ffffff;
+  
+  /* Text colors - Light theme */
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #6b7280;
+  
+  /* Border colors - Light theme */
+  --color-border: #e5e7eb;
+}
+
+.dark {
+  /* Primary colors - Dark theme */
+  --color-primary: #06b6d4;
+  --color-primary-dark: #0891b2;
+  
+  /* Background colors - Dark theme */
+  --color-bg-primary: #0f172a;
+  --color-bg-secondary: #1e293b;
+  
+  /* Text colors - Dark theme */
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #cbd5e1;
+  
+  /* Border colors - Dark theme */
+  --color-border: #334155;
 }
 
 :root {
   font-family: Inter, system-ui, -apple-system, sans-serif;
 }
 
+/* Smooth theme transitions */
+* {
+  transition: background-color 300ms ease-in-out, 
+              color 300ms ease-in-out, 
+              border-color 300ms ease-in-out;
+}
+
 body {
   min-height: 100vh;
-  background-color: #f8fafc;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+#root {
+  min-height: 100vh;
 }
 
 [data-amplify-authenticator] {
@@ -19,4 +60,84 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+}
+
+/* Amplify Authenticator Dark Mode Overrides */
+.dark [data-amplify-authenticator] {
+  /* Container background */
+  --amplify-colors-background-primary: var(--color-bg-secondary);
+  --amplify-colors-background-secondary: var(--color-bg-primary);
+  
+  /* Text colors */
+  --amplify-colors-font-primary: var(--color-text-primary);
+  --amplify-colors-font-secondary: var(--color-text-secondary);
+  --amplify-colors-font-tertiary: var(--color-text-secondary);
+  
+  /* Border colors */
+  --amplify-colors-border-primary: var(--color-border);
+  --amplify-colors-border-secondary: var(--color-border);
+  --amplify-colors-border-tertiary: var(--color-border);
+  
+  /* Brand/Primary colors */
+  --amplify-colors-brand-primary-10: var(--color-primary);
+  --amplify-colors-brand-primary-80: var(--color-primary);
+  --amplify-colors-brand-primary-90: var(--color-primary-dark);
+  --amplify-colors-brand-primary-100: var(--color-primary-dark);
+  
+  /* Input field colors */
+  --amplify-components-fieldcontrol-background-color: var(--color-bg-primary);
+  --amplify-components-fieldcontrol-border-color: var(--color-border);
+  --amplify-components-fieldcontrol-color: var(--color-text-primary);
+  --amplify-components-fieldcontrol-focus-border-color: var(--color-primary);
+  
+  /* Button colors */
+  --amplify-components-button-primary-background-color: var(--color-primary);
+  --amplify-components-button-primary-hover-background-color: var(--color-primary-dark);
+  --amplify-components-button-primary-color: #ffffff;
+  --amplify-components-button-link-color: var(--color-primary);
+  
+  /* Tab colors */
+  --amplify-components-tabs-item-active-border-color: var(--color-primary);
+  --amplify-components-tabs-item-active-color: var(--color-primary);
+  --amplify-components-tabs-item-color: var(--color-text-secondary);
+  --amplify-components-tabs-item-hover-color: var(--color-text-primary);
+}
+
+/* Additional specific overrides for form elements */
+.dark [data-amplify-authenticator] input,
+.dark [data-amplify-authenticator] select {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+
+.dark [data-amplify-authenticator] input:focus,
+.dark [data-amplify-authenticator] select:focus {
+  border-color: var(--color-primary);
+  outline-color: var(--color-primary);
+}
+
+/* Label styling */
+.dark [data-amplify-authenticator] label {
+  color: var(--color-text-primary);
+}
+
+/* Link styling */
+.dark [data-amplify-authenticator] a {
+  color: var(--color-primary);
+}
+
+.dark [data-amplify-authenticator] a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Error message styling */
+.dark [data-amplify-authenticator] [data-amplify-error] {
+  color: #f87171;
+}
+
+/* Card/Container styling */
+.dark [data-amplify-authenticator] [data-amplify-container] {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-border);
 }
