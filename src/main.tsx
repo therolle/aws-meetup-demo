@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Authenticator } from "@aws-amplify/ui-react";
+import { RouterProvider } from "@tanstack/react-router";
 import { Amplify } from "aws-amplify";
 import outputs from "../amplify_outputs.json";
-import App from "./App";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { SidebarProvider } from "./contexts/SidebarContext";
+import { router } from "./router";
 import "@aws-amplify/ui-react/styles.css";
 import "./index.css";
 
@@ -17,7 +19,9 @@ ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
     <ThemeProvider>
       <Authenticator>
-        <App />
+        <SidebarProvider>
+          <RouterProvider router={router} />
+        </SidebarProvider>
       </Authenticator>
     </ThemeProvider>
   </React.StrictMode>,

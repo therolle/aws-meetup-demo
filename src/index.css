@@ -60,7 +60,8 @@ body {
   min-height: 100vh;
 }
 
-[data-amplify-authenticator] {
+/* Center only the auth form (when router is showing login/signup) */
+[data-amplify-authenticator]:has([data-amplify-router]) {
   display: flex;
   justify-content: center;
   align-items: center;
