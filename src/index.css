@@ -4,15 +4,15 @@
   /* Primary colors */
   --color-primary: #047d95;
   --color-primary-dark: #036b80;
-  
+
   /* Background colors - Light theme */
   --color-bg-primary: #f8fafc;
   --color-bg-secondary: #ffffff;
-  
+
   /* Text colors - Light theme */
   --color-text-primary: #1f2937;
   --color-text-secondary: #6b7280;
-  
+
   /* Border colors - Light theme */
   --color-border: #e5e7eb;
 }
@@ -21,28 +21,33 @@
   /* Primary colors - Dark theme */
   --color-primary: #06b6d4;
   --color-primary-dark: #0891b2;
-  
+
   /* Background colors - Dark theme */
   --color-bg-primary: #0f172a;
   --color-bg-secondary: #1e293b;
-  
+
   /* Text colors - Dark theme */
   --color-text-primary: #f1f5f9;
   --color-text-secondary: #cbd5e1;
-  
+
   /* Border colors - Dark theme */
   --color-border: #334155;
 }
 
 :root {
-  font-family: Inter, system-ui, -apple-system, sans-serif;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 /* Smooth theme transitions */
 * {
-  transition: background-color 300ms ease-in-out, 
-              color 300ms ease-in-out, 
-              border-color 300ms ease-in-out;
+  transition:
+    background-color 300ms ease-in-out,
+    color 300ms ease-in-out,
+    border-color 300ms ease-in-out;
 }
 
 body {
@@ -67,35 +72,37 @@ body {
   /* Container background */
   --amplify-colors-background-primary: var(--color-bg-secondary);
   --amplify-colors-background-secondary: var(--color-bg-primary);
-  
+
   /* Text colors */
   --amplify-colors-font-primary: var(--color-text-primary);
   --amplify-colors-font-secondary: var(--color-text-secondary);
   --amplify-colors-font-tertiary: var(--color-text-secondary);
-  
+
   /* Border colors */
   --amplify-colors-border-primary: var(--color-border);
   --amplify-colors-border-secondary: var(--color-border);
   --amplify-colors-border-tertiary: var(--color-border);
-  
+
   /* Brand/Primary colors */
   --amplify-colors-brand-primary-10: var(--color-primary);
   --amplify-colors-brand-primary-80: var(--color-primary);
   --amplify-colors-brand-primary-90: var(--color-primary-dark);
   --amplify-colors-brand-primary-100: var(--color-primary-dark);
-  
+
   /* Input field colors */
   --amplify-components-fieldcontrol-background-color: var(--color-bg-primary);
   --amplify-components-fieldcontrol-border-color: var(--color-border);
   --amplify-components-fieldcontrol-color: var(--color-text-primary);
   --amplify-components-fieldcontrol-focus-border-color: var(--color-primary);
-  
+
   /* Button colors */
   --amplify-components-button-primary-background-color: var(--color-primary);
-  --amplify-components-button-primary-hover-background-color: var(--color-primary-dark);
+  --amplify-components-button-primary-hover-background-color: var(
+    --color-primary-dark
+  );
   --amplify-components-button-primary-color: #ffffff;
   --amplify-components-button-link-color: var(--color-primary);
-  
+
   /* Tab colors */
   --amplify-components-tabs-item-active-border-color: var(--color-primary);
   --amplify-components-tabs-item-active-color: var(--color-primary);

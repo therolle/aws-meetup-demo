@@ -8,7 +8,7 @@ function renderWithTheme() {
   return render(
     <ThemeProvider>
       <ThemeToggle />
-    </ThemeProvider>
+    </ThemeProvider>,
   );
 }
 
@@ -32,7 +32,7 @@ describe("ThemeToggle", () => {
 
     expect(document.documentElement.classList.contains("dark")).toBe(true);
     expect(
-      screen.getByRole("button", { name: /switch to light mode/i })
+      screen.getByRole("button", { name: /switch to light mode/i }),
     ).toBeInTheDocument();
   });
 
@@ -43,12 +43,12 @@ describe("ThemeToggle", () => {
     const button = screen.getByRole("button", { name: /switch to dark mode/i });
     await user.click(button);
     await user.click(
-      screen.getByRole("button", { name: /switch to light mode/i })
+      screen.getByRole("button", { name: /switch to light mode/i }),
     );
 
     expect(document.documentElement.classList.contains("dark")).toBe(false);
     expect(
-      screen.getByRole("button", { name: /switch to dark mode/i })
+      screen.getByRole("button", { name: /switch to dark mode/i }),
     ).toBeInTheDocument();
   });
 

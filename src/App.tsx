@@ -40,9 +40,7 @@ function App() {
 
       <main className="mx-auto max-w-xl px-4 py-10">
         <div className="flex items-center justify-between mb-8">
-          <h1 className="text-2xl font-bold text-text-primary">
-            My Todos
-          </h1>
+          <h1 className="text-2xl font-bold text-text-primary">My Todos</h1>
           <button
             onClick={signOut}
             className="rounded-md bg-bg-primary px-3 py-1.5 text-sm font-medium text-text-secondary hover:bg-border transition-colors"
